@@ -12,6 +12,13 @@
         <div class="row">
             <div class="col-md-6 offset-md-3 mt-5">
                 <h4>Contact Us</h4><hr>
+
+                <form action="">
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" name="name" placeholder="Enter your name" value="{{ old('name') }}">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
