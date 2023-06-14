@@ -16,10 +16,15 @@ class ContactController extends Controller
         ]);
 
         if($this->isOnline()){
-            //dd($request);
-            return "Connected!";
+            $mail_data = [
+                'recipient'=>'nilushikaprashadini98@gmail.com',
+                'fromEmail'=>$request->email,
+                'fromName'=>$request->name,
+                'subject'=>$request->subject,
+                'body'=>$request->message,
+            ];
         }else{
-            return "No connection";
+            return redirect()->back()->withInput()->with('error', 'Check your internet connection');
         }
     }
 
