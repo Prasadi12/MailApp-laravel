@@ -19,6 +19,16 @@
                         <input type="text" class="form-control" name="name" placeholder="Enter your name" value="{{ old('name') }}">
                         @error('name')<span class="text-danger">{{ $message }}</span>@enderror
                     </div>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="email" class="form-control" name="email" placeholder="Enter your email" value="{{ old('email') }}">
+                        @error('email')<span class="text-danger">{{ $message }}</span>@enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="">Subject</label>
+                        <input type="subject" class="form-control" name="subject" placeholder="Enter your subject" value="{{ old('subject') }}">
+                        @error('subject')<span class="text-danger">{{ $message }}</span>@enderror
+                    </div>
                 </form>
             </div>
         </div>
