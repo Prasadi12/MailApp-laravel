@@ -17,6 +17,7 @@
                     <div class="form-group">
                         <label for="">Name</label>
                         <input type="text" class="form-control" name="name" placeholder="Enter your name" value="{{ old('name') }}">
+                        @error('name')<span class="text-danger">{{ $message }}</span>@enderror
                     </div>
                 </form>
             </div>
