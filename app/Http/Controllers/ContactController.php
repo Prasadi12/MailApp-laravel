@@ -12,17 +12,18 @@ class ContactController extends Controller
             'name'=>'required',
             'email'=>'required|email',
             'subject'=>'required',
-            'message'=>'required'
+            //'message'=>'required',
         ]);
 
         if($this->isOnline()){
+            //dd($request);
             return "Connected!";
         }else{
             return "No connection";
         }
     }
 
-    public function inOnline($site = "https://youtube.com/"){
+    public function isOnline($site = "https://youtube.com/"){
         if(@fopen($site, "r")){
             return true;
         }else{
