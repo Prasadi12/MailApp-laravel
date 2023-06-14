@@ -46,6 +46,9 @@
                     form {
                         max-width: 400px;
                         margin: 0 auto;
+                        border: 1px solid #ccc;
+                        padding: 20px;
+                        border-radius: 4px;
                     }
 
                     label {
@@ -68,6 +71,12 @@
                         height: 150px;
                     }
 
+                    .head{
+                        font-size: 25px;
+                        color: blue;
+                        margin-left: 130px;
+                    }
+
                     button[type="submit"] {
                         background-color: #4CAF50;
                         color: white;
@@ -75,17 +84,20 @@
                         border: none;
                         border-radius: 4px;
                         cursor: pointer;
+                        margin-left: 180px;
                     }
 
                     button[type="submit"]:hover {
                         background-color: #45a049;
+
                     }
                 </style>
-                <h4>Contact Us</h4><hr>
+
 
 
                 <form action="/contact" method="post">
                     @csrf
+                    <h4 class="head">Contact Us</h4><hr>
                     {{--  <div>
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
