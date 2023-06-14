@@ -91,6 +91,10 @@
                         background-color: #45a049;
 
                     }
+                    .primary-button {
+                        background-color: #007bff;
+                        color: white;
+                    }
                 </style>
 
 
@@ -131,7 +135,7 @@
                         @error('message')<span class="text-danger">{{ $message }}</span>@enderror
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-primary">Send</button>
+                        <button type="submit" class="primary-button">Send</button>
                     </div>
                 </form>
 
