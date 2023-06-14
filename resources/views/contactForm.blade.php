@@ -95,7 +95,7 @@
 
 
 
-                <form action="/contact" method="post">
+                <form action="{{ route('send.email') }}" method="POST">
                     @csrf
                     <h4 class="head">Contact Us</h4><hr>
                     {{--  <div>
@@ -131,7 +131,7 @@
                         @error('message')<span class="text-danger">{{ $message }}</span>@enderror
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Send</button>
                     </div>
                 </form>
 

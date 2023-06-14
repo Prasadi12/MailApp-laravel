@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::view('/contact','contactForm')->name('contactForm');
+Route::post('/send',[ContactController::class,'send'])->name('send.email');
