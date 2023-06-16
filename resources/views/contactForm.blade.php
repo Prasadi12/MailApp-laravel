@@ -131,7 +131,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Message :</label>
-                        <textarea id="message" class="form-control" cols="4" rows="4" value="{{ old('message') }}"></textarea>
+                        <textarea id="message" class="form-control" name="message" cols="4" rows="4" value="{{ old('message') }}"></textarea>
                         @error('message')<span class="text-danger">{{ $message }}</span>@enderror
                     </div>
                     <div>
