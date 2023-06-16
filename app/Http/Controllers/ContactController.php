@@ -30,6 +30,8 @@ class ContactController extends Controller
                         ->from($mail_data['fromEmail'],$mail_data['fromName'])
                         ->subject($mail_data['subject']);
             });
+
+            return redirect()->back()->with('success','Email Sent!');
         }else{
             return redirect()->back()->withInput()->with('error', 'Check your internet connection');
         }
