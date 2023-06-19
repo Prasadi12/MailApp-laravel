@@ -34,8 +34,8 @@ class ContactController extends Controller
             // });
 // Create the Transport
 $transport = new Swift_SmtpTransport('smtp.gmail.com', 465,'ssl');
-$transport->setUsername('182028882742-issq0bscpdbu6fo961i045i5seq4tdcu.apps.googleusercontent.com');
-$transport->setPassword('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');
+$transport->setUsername(env('MAIL_USERNAME'));
+$transport->setPassword(env('MAIL_PASSWORD'));
 $transport->setStreamOptions([
     'ssl' => [
         'verify_peer' => false,
