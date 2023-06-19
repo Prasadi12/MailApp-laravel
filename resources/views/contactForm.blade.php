@@ -71,10 +71,20 @@
                         height: 150px;
                     }
 
+                    .fo{
+                        margin-right: 20px;
+                    }
+
+                    .form-group1{
+                        margin-top: 20px;
+                    }
+
                     .head{
                         font-size: 25px;
                         color: blue;
                         margin-left: 130px;
+                        margin-bottom: 0;
+                        margin-top: 5px;
                     }
 
                     button[type="submit"] {
@@ -91,6 +101,10 @@
                         background-color: #45a049;
 
                     }
+
+                    .h{
+                        width: 100%;
+                    }
                     .primary-button {
                         background-color: #007bff;
                         color: white;
@@ -101,7 +115,8 @@
 
                 <form action="{{ route('send.email') }}" method="POST">
                     @csrf
-                    <h4 class="head">Contact Us</h4><hr>
+                    <div class="fo">
+                    <h4 class="head">Contact Us</h4><div class="h"><hr></div>
                     {{--  <div>
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
@@ -114,6 +129,7 @@
                         <label for="message">Message:</label>
                         <textarea id="message" name="message" required></textarea>
                     </div>  --}}
+                    <div class="form-group1">
                     <div class="form-group">
                         <label for="">Name :</label>
                         <input type="text" id="name" class="form-control" name="name" placeholder="Enter your name" value="{{ old('name') }}">
@@ -136,6 +152,8 @@
                     </div>
                     <div>
                         <button type="submit" class="primary-button">Send</button>
+                    </div>
+                    </div>
                     </div>
                 </form>
 
