@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" cantent="IE-edge">
@@ -11,6 +12,7 @@
         .input{width: 100%;}
     </style>  --}}
 </head>
+
 <body>
     <div class="container">
         <div class="row">
@@ -71,15 +73,15 @@
                         height: 150px;
                     }
 
-                    .fo{
+                    .fo {
                         margin-right: 20px;
                     }
 
-                    .form-group1{
+                    .form-group1 {
                         margin-top: 20px;
                     }
 
-                    .head{
+                    .head {
                         font-size: 25px;
                         color: blue;
                         margin-left: 130px;
@@ -102,64 +104,64 @@
 
                     }
 
-                    .h{
+                    .h {
                         width: 100%;
                     }
+
                     .primary-button {
                         background-color: #007bff;
                         color: white;
                     }
                 </style>
 
-
-
                 <form action="{{ route('send.email') }}" method="POST">
                     @csrf
                     <div class="fo">
-                    <h4 class="head">Contact Us</h4><div class="h"><hr></div>
-                    {{--  <div>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div>
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>  --}}
-                    <div class="form-group1">
-                    <div class="form-group">
-                        <label for="">Name :</label>
-                        <input type="text" id="name" class="form-control" name="name" placeholder="Enter your name" value="{{ old('name') }}">
-                        @error('name')<span class="text-danger">{{ $message }}</span>@enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="">Email :</label>
-                        <input type="email" id="email" class="form-control" name="email" placeholder="Enter your email" value="{{ old('email') }}">
-                        @error('email')<span class="text-danger">{{ $message }}</span>@enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="">Subject :</label>
-                        <input type="text" id="subject" class="form-control" name="subject" placeholder="Enter your subject" value="{{ old('subject') }}">
-                        @error('subject')<span class="text-danger">{{ $message }}</span>@enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="">Message :</label>
-                        <textarea id="message" class="form-control" name="message" cols="4" rows="4" value="{{ old('message') }}"></textarea>
-                        @error('message')<span class="text-danger">{{ $message }}</span>@enderror
-                    </div>
-                    <div>
-                        <button type="submit" class="primary-button">Send</button>
-                    </div>
-                    </div>
+                        <h4 class="head">Contact Us</h4>
+                        <div class="h">
+                            <hr>
+                        </div>
+                        <div class="form-group1">
+                            <div class="form-group">
+                                <label for="">Name :</label>
+                                <input type="text" id="name" class="form-control" name="name"
+                                    placeholder="Enter your name" value="{{ old('name') }}">
+                                @error('name')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="">Email :</label>
+                                <input type="email" id="email" class="form-control" name="email"
+                                    placeholder="Enter your email" value="{{ old('email') }}">
+                                @error('email')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="">Subject :</label>
+                                <input type="text" id="subject" class="form-control" name="subject"
+                                    placeholder="Enter your subject" value="{{ old('subject') }}">
+                                @error('subject')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="">Message :</label>
+                                <textarea id="message" class="form-control" name="message" cols="4" rows="4" value="{{ old('message') }}"></textarea>
+                                @error('message')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div>
+                                <button type="submit" class="primary-button">Send</button>
+                            </div>
+                        </div>
                     </div>
                 </form>
-
-
             </div>
         </div>
     </div>
 </body>
+
 </html>
